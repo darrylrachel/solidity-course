@@ -20,11 +20,11 @@ contract Counter {
     return count;
   }
 
-  function getCount() public returns (uint) {
+  function getCount() public view returns (uint) {
     return count;
   }
 
-  function getName() public returns (string memory currentName) {
+  function getName() public view returns (string memory currentName) {
     return name;
   }
 
