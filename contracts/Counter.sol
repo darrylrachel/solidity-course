@@ -1,0 +1,35 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.0;
+
+contract Counter {
+  string public name;
+  uint256 public count;
+
+  constructor(string memory _name, uint _initialCount) {
+    name = _name;
+    count = _initialCount;
+  }
+
+  function increment() public returns (uint newCount) {
+    count ++;
+    return count;
+  }
+
+  function decrement() public returns (uint newCount) {
+    count --;
+    return count;
+  }
+
+  function getCount() public returns (uint) {
+    return count;
+  }
+
+  function getName() public returns (string memory currentName) {
+    return name;
+  }
+
+  function setName(string memory _newName) public returns (string memory newName) {
+    name = _newName;
+    return name;
+  }
+}
